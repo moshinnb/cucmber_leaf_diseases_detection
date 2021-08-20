@@ -1,6 +1,6 @@
 h5py== 3.1.0
 os
-glob=>0.5
+
 glob2==0.5
 cv2==4.5.2
 mahotas==1.4.11
