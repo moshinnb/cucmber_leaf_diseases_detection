@@ -1,18 +1,10 @@
-h5py== 3.1.0
-os
-
 glob2==0.5
 cv2==4.5.2
 mahotas==1.4.11
 numpy==1.19.5
 flask==0.12.2
-
 joblib==1.0.1
 matplotlib ==2.1.0
 sklearn==0.19.1
-
-
-
-
-
+h5py==3.1.0
 warnings
