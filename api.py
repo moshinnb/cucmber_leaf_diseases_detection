@@ -14,7 +14,7 @@ from werkzeug.utils import secure_filename
 
 
 app = Flask(__name__)
-UPLOAD_FOLDER='C:/Users/moshi/webpage/sample_images'
+UPLOAD_FOLDER='./sample_images'
 import joblib
 @app.route('/', methods=['GET'])
 def index():
