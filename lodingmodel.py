@@ -11,7 +11,7 @@ le=LabelEncoder()
 le.fit_transform(labels_name)
 
 
-model_path=r"C:\Users\moshi\webpage\models\randomfores.joblib"
+model_path=r"models/randomfores.joblib"
 
 
 
@@ -54,7 +54,7 @@ def fd_histogram(image, mask=None):
 
 
 
-test=r'C:\Users\moshi\webpage\sample_images\download (1).jpg'
+
 
 def model_result(file_path):
 
