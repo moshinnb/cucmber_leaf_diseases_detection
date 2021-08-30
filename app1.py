@@ -31,7 +31,7 @@ from flask import request
 
 
 # Flask utils
-from flask import Flask,request,flash, redirect, url_for, request, render_template
+from flask import Flask,request,flash, redirect, url_for, request,jsonify, render_template
 from werkzeug.utils import secure_filename
 
 
@@ -165,7 +165,7 @@ def allowed_file(filename):
 
 
 @app.route('/', methods=['GET'])
-def index():
+def home():
     # Main page
     return render_template('index.html')
 
