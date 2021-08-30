@@ -42,7 +42,7 @@ def allowed_file(filename):
 
 
 @app.route('/', methods=['GET'])
-def index():
+def home():
     # Main page
     return render_template('index.html')
 
