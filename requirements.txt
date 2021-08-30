@@ -7,6 +7,13 @@ h5py==3.4.0
 mahotas==1.4.11
 itsdangerous==2.0.1
 Jinja2==3.0.1
+Cython>=0.28.5
+
+scipy>=0.15.1
+
+scikit-learn==0.22.1
+matplotlib>=1.4.3
+pandas>=0.19
 MarkupSafe==2.0.1
 numpy==1.21.2
 Werkzeug==2.0.1
