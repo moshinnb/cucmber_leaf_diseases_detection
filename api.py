@@ -49,7 +49,7 @@ def index():
 
 
 
-
+'''
 
 
 @app.route('/predict', methods=['GET', 'POST'])
@@ -94,6 +94,7 @@ def upload():
 def show():
     r="mohsin nb"
     return r
+'''
 
 if __name__ == "__main__":
     app.run(debug=True)
