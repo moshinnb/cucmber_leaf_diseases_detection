@@ -124,7 +124,7 @@ def model_result(file_path):
     #loding model 
     predict_test=joblib.load(model_path)
     #testing using the loded model
-
+    
     res=predict_test.predict(test_feature.reshape(1,-1))
 
     print(res)
@@ -188,10 +188,11 @@ def upload():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        filename1 = "static/uploads/" + filename  
+        filename1 = "static/uploads/" + filename 
+	global preds
         preds = model_result(filename1)
-        result=preds
-        return result
+        
+        return preds
 
     
 
