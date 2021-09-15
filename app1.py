@@ -156,7 +156,7 @@ app.secret_key="secret key"
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 
 def allowed_file(filename):
-	return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 	
 
 
@@ -174,10 +174,10 @@ def home():
 
 
 
-
+global preds
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
-    global preds
+    
     if 'file' not in request.files:
         flash('No file part')
         return redirect(request.url)
@@ -190,7 +190,7 @@ def upload():
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         filename1 = "static/uploads/" + filename 
-	global preds
+	
         preds = model_result(filename1)
         
         return preds
