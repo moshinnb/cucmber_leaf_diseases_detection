@@ -215,8 +215,36 @@ def upload():
 
 @app.route('/predict/remedies')
 def show():
-    r="mohsin nb"
-    return r
+    r="No Remedies Present for the given Disease"
+    g="No Remedies"
+    a="Cause: Fungus (Alternaria cucumerina).  Symptoms: Irregular brown spots on the leaves—sometimes with yellow edges.  Treatment: Fungicides—either commercial or homemade.  You can also try spraying homemade fungicides made of a mixture of soapy water, baking soda, and vinegar. Some organic gardeners also opt for copper fungicides.  If only a few parts of the plant are affected, cut and remove those parts to prevent the fungus from spreading.  If the plant is severely infected, you may have to remove the whole plant, treat or replace the soil, and start over."
+    m="Cause: Virus(Cucumber mosaic virus).  Symptoms: White, yellow, or green lines and patterns on leaves and fruit.Plants may not produce as much fruit, and if they do, the fruits may be small and malformed. The leaves may also be malformed. The veins of the leaves may also become very distinct and yellow.    Treatment: There are currently no treatments that can cure or prevent a cucumber mosaic virus infection.Remove any infected plants and plant materials.Remove weeds and plant debris often since both can be breeding grounds for many plant diseases."
+    c="No Remedies present "
+    w="Cause: Bacteria (Erwinia tracheiphila) & is spread mainly through cucumber beetles (striped and spotted).The bacteria survive winters by living in their beetles' guts.  Symptoms: Yellow, wilting leaves that appear to be drying out.The presence of a milky sap oozing from the cut signifies bacterial wilt.   Treatment: There is currently no effective treatment for bacterial wilt.If a large part of your plant is affected, it's best to remove the entire plant from your garden. Again, prevention is still the best treatment. Make sure you use sanitary cultural practices and avoid exposing stems, leaves, and fruit to water and soil contact."
+    p="Cause: Fungus(Podosphaera xanthii or Erysiphe cichoracearum)The fungi favor warm, wet conditions, which is why it is commonly found in greenhouse-grown plants.The spores don’t need moisture to germinate, and the can spread to other plants by wind, insect, and contaminated water and gardening equipment.   Symptoms: White, powdery spots or layers on the leaves and stems.Fruits can also be affected, although this is rare.   Treatment: Spray chemical or organic fungicides and remove affected plant parts.The usual method of spraying fungicide and removing affected plant parts still applies, but there are many organic treatment options that are just as effective like Milk, Neem oil, Sulphur, Copper fungicides, Garlic, Baking Soda, Vinegar, Potassium bicarbonate."
+    d="Cause: Fungus(Pseudoperonospora cubensis).Downy mildew favors shade and moisture. The fungi cannot survive extremely cold winters (like those in the Northeastern U.S.), but in temperate regions, they can overwinter in plant debris.   Symptoms: Light green or yellow spots on the leaves that appear angular.You will also find fuzzy, dark gray spots with a purplish tint (spores) on the underside of the leaves—a tell-tale sign of downy mildew. As the disease progresses, leaves will dry out, become brown, and fall off. However, visible symptoms are not always consistent.  Treatment: Spray fungicides ike Orondis, Ranman, Curzate, Zing!, Zampro and remove infected plant parts & Severe infections may require you to remove most or all of the affected plant to prevent further spreading."
+    b="Cause:Bacteria(Pseudomonas syringae, Septoria cucurbitacearum, or Xanthomonas campestris)The bacteria that cause leaf spots are opportunistic, spreading through lesions created by insect bites and through seeds that spread the bacteria through contact with water. However, they are not as hardy as other pathogens.    Symptoms: Small, brownish, angular or circular spots—sometimes with yellow edges—or black spots on the leaves.Xanthomonas infection usually causes brown spots with yellow edges, while Pseudomonas infection usually causes reddish-brown spots. In both cases, spots will quickly turn black.Spots on the leaves and fruit can give other pathogens—especially fungi—the opportunity to infect. This disease often causes leaves to fall off, making fruits vulnerable to sunscalding.   Treatment:There is currently no effective treatment for bacterial leaf spots.Look for cucumber beetles starting early in the spring, when the weather starts to warm up. They usually come out in early evening. Remove them as you see them."
+    n="Cause: Fungus(Colletotrichum orbiculare).Regions with high humidity like southern and mid-Atlantic states are highly susceptible to fungal plant diseases.The spores (conidia) need moisture and mild temperatures to germinate.   Symptoms: Yellow, water-soaked, circular spots on the leaves and fruit with dark brown to black edges.Spots on the fruits may appear black and sunken with a pink- or salmon-colored gelatinous substance in the center. This gelatinous substance is a cluster of fungal spores—a characteristic sign of anthracnose.   Treatment: Fungicides like Chlorothalonil (Bravo) and benomyl (Benlate) are popular fungicides used to treat anthracnose. In rainy seasons, more frequent applications may be required.If a large part of your plant is infected, you may need to remove the entire plant and start over with sanitized soil."
+    if preds == "good_cucumber":
+        return g
+    elif preds == "Altrnaria_blight":
+        return a
+    elif preds == "cucumber_mosic_virus":
+        return m
+    elif preds == "Cercospora_LF":
+        return c
+    elif preds == "bacterial_wilt":
+        return w
+    elif preds == "powdery_mildew":
+        return p
+    elif preds == "downy_mildew":
+        return d
+    elif preds == "bacteral_leaf_spot":
+        return b
+    elif preds == "anthracnose":
+        return n
+    else:
+        return r
 
 if __name__ == "__main__":
     app.run()
