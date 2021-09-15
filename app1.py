@@ -174,7 +174,7 @@ def home():
 
 
 
-global preds
+
 preds="reload the image"
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
@@ -191,11 +191,10 @@ def upload():
         filename = secure_filename(file.filename)
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
         filename1 = "static/uploads/" + filename 
-	
+	global preds
         res= model_result(filename1)
 	preds=res
-        
-        return res
+	return res
 
     
 
