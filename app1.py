@@ -177,6 +177,7 @@ def home():
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
+    global preds
     if 'file' not in request.files:
         flash('No file part')
         return redirect(request.url)
