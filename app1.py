@@ -169,13 +169,6 @@ def home():
     # Main page
     return render_template('index.html')
 
-
-
-
-
-
-
-preds="reload the image"
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
     
