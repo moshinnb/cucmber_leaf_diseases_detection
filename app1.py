@@ -46,13 +46,13 @@ fixed_size             = tuple((500, 500))
 labels_name=['Altrnaria_blight', 'Cercospora_LF', 'anthracnose',
        'bacteral_leaf_spot', 'bacterial_wilt', 'cucumber_mosic_virus',
        'downy_mildew', 'good_cucumber', 'powdery_mildew']
-
-
+labels_name_1=['Altrnaria_blight', 'Anthracnose', 'Bacteral_leaf_spot', 'Cercospora_LF', 'Cucumber_mosic_virus', 'Downy_mildew', 'Good_cucumber', 'Powdery_mildew']
 le=LabelEncoder()
 le.fit_transform(labels_name)
 
 
 model_path=r"models/randomfores.joblib"
+model_path_1=r"models/random_model_less.joblib"
 
 
 
