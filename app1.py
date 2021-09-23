@@ -212,7 +212,7 @@ def upload():
 @app.route('/predict/remedies')
 def show():
     r="No Remedies Present for the given Disease"
-    g="No Remedies"
+    g="your plant is under good condition"
     a="Cause: Fungus (Alternaria cucumerina).     Symptoms: Irregular brown spots on the leaves—sometimes with yellow edges.  Treatment: Fungicides—either commercial or homemade.     You can also try spraying homemade fungicides made of a mixture of soapy water, baking soda, and vinegar.    Some organic gardeners also opt for copper fungicides.     If only a few parts of the plant are affected, cut and remove those parts to prevent the fungus from spreading.     If the plant is severely infected, you may have to remove the whole plant, treat or replace the soil, and start over."
     m="Cause: Virus(Cucumber mosaic virus).  Symptoms: White, yellow, or green lines and patterns on leaves and fruit.Plants may not produce as much fruit, and if they do, the fruits may be small and malformed. The leaves may also be malformed. The veins of the leaves may also become very distinct and yellow.    Treatment: There are currently no treatments that can cure or prevent a cucumber mosaic virus infection.Remove any infected plants and plant materials.Remove weeds and plant debris often since both can be breeding grounds for many plant diseases."
     c="No Remedies present "
